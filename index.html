@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+            <!DOCTYPE html>
+            <html lang="pt-BR">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Ficha de Personagem - Myzzdrin</title>
+                <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap" rel="stylesheet">
+                <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU+Guides&display=swap" rel="stylesheet">
+
+                <style>
+                    /* Reset básico */
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+            
+                    /* Estilos globais */
+                    body {
+                        font-family: 'Saira Condensed', sans-serif;
+                        background: url('background.jpg') no-repeat center center fixed;
+                        background-size: cover;
+                        position: relative;
+                        background-size: cover;
+                        color: #ffffff;
+                        line-height: 1.6;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                    }
+                    body::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+                        z-index: -1;
+                    }
+                    h1, h2, h3 {
+                        color: #9861ff;
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+            
+                    h1 {
+                        font-size: 2.5rem;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                    }
+            
+                    h2 {
+                        font-size: 2rem;
+                        font-weight: 600;
+                        border-bottom: 2px solid #9861ff;
+                        padding-bottom: 10px;
+                        margin-bottom: 20px;
+                    }
+            
+                    p, li {
+                        font-size: 1.1rem;
+                        color: #e0e0e0;
+                        font-weight: 400;
+                    }
+            
+                    strong {
+                        font-weight: 600;
+                    }
+            
+                    /* Cards */
+                    .card {
+                        background-color: #2e2e2e;
+                        border-radius: 15px;
+                        padding: 25px;
+                        margin: 20px 0;
+                        width: 90%;
+                        max-width: 800px;
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    }
+            
+                    .card:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+                    }
+            
+                    .card ul {
+                        list-style-type: none;
+                        padding: 0;
+                    }
+            
+                    .card ul li {
+                        margin-bottom: 10px;
+                        padding: 10px;
+                        background-color: #3e3e3e;
+                        border-radius: 5px;
+                        transition: background-color 0.3s ease;
+                    }
+            
+                    .card ul li:hover {
+                        background-color: #4e4e4e;
+                    }
+            
+                    .card ul li strong {
+                        color: #9861ff;
+                    }
+            
+                    /* Seções de magias */
+                    .spell {
+                        background-color: #3e3e3e;
+                        padding: 15px;
+                        border-radius: 10px;
+                        margin-bottom: 15px;
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    }
+            
+                    .spell:hover {
+                        transform: translateY(-3px);
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+                    }
+            
+                    .spell h4 {
+                        margin-top: 0;
+                        color: #9861ff;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+            
+                    .spell p {
+                        margin: 5px 0;
+                    }
+            
+                    .spell .effect {
+                        font-weight: 600;
+                        color: #9861ff;
+                    }
+            
+                    .spell .description {
+                        font-style: italic;
+                        color: #b0b0b0;
+                    }
+            
+                    .spell .creative-use {
+                        color: #9861ff;
+                        font-weight: 600;
+                    }
+            
+                    /* Botões e interações */
+                    .toggle-button {
+                        background-color: #9861ff;
+                        color: #1e1e1e;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        margin-top: 10px;
+                        transition: background-color 0.3s ease;
+                    }
+            
+                    .toggle-button:hover {
+                        background-color: #7a4dcc;
+                    }
+            
+                    /* Responsividade */
+                    @media (max-width: 768px) {
+                        h1 {
+                            font-size: 2rem;
+                        }
+            
+                        h2 {
+                            font-size: 1.5rem;
+                        }
+            
+                        .card {
+                            width: 100%;
+                            padding: 15px;
+                        }
+            
+                        .spell {
+                            padding: 10px;
+                        }
+                    }
+                </style>
+            </head>
+            <body>
+                <img src="drow.jpeg" alt="Imagem de perfil de Myzzdrin" style="border-radius: 50%; width: 450px; height: 450px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);">
+                <header>
+                    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU+Guides&display=swap" rel="stylesheet">
+                    <h1 style="font-family: 'Playwrite HU Guides', sans-serif; font-size: 3rem; font-weight: 900; color: #7a4dcc; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); letter-spacing: 3px;">MYZZDRIN</h1>
+                </header>
+            
+                <div class="card">
+                    <h2>Informações Básicas</h2>
+                    <ul>
+                        <li><strong>Classe:</strong> Feiticeiro (Linhagem Sombria)</li>
+                        <li><strong>Raça:</strong> Drow</li>
+                        <li><strong>Nível:</strong> 1 (ou o nível inicial da campanha)</li>
+                        <li><strong>Idade:</strong> 229 anos</li>
+                        <li><strong>Altura:</strong> 1,75m</li>
+                        <li><strong>Bônus de Proficiência:</strong> +2 (nível 1)</li>
+                    </ul>
+                </div>
+            
+                <div class="card">
+                    <h2>Atributos</h2>
+                    <ul>
+                        <li><strong>Força:</strong> 8 (-1)</li>
+                        <li><strong>Destreza:</strong> 16 (+3)</li>
+                        <li><strong>Constituição:</strong> 14 (+2)</li>
+                        <li><strong>Inteligência:</strong> 12 (+1)</li>
+                        <li><strong>Sabedoria:</strong> 10 (+0)</li>
+                        <li><strong>Carisma:</strong> 18 (+4)</li>
+                    </ul>
+                </div>
+            
+                <div class="card">
+                    <h2>Perícias</h2>
+                    <ul>
+                        <li><strong>Acrobacia (DES):</strong> +3</li>
+                        <li><strong>Furtividade (DES):</strong> +5 (Expertise de Drow)</li>
+                        <li><strong>Intimidação (CAR):</strong> +6</li>
+                        <li><strong>Investigação (INT):</strong> +3</li>
+                        <li><strong>Percepção (SAB):</strong> +2</li>
+                        <li><strong>Sobrevivência (SAB):</strong> +2</li>
+                    </ul>
+                </div>
+            
+                <div class="card">
+                    <h2>Traços de Personalidade</h2>
+                    <ul>
+                        <li>✅ <strong>Espírito Livre:</strong> Myzzdrin segue apenas sua própria moral, sem se importar com regras rígidas.</li>
+                        <li>✅ <strong>Sombra Protetora:</strong> Apesar de caótico, ele sempre ajuda os mais fracos e oprimidos.</li>
+                        <li>✅ <strong>Culinaria do Submundo:</strong> Ama cozinhar coisas estranhas</li>
+                        <li>⚠ <strong>Distorção da Realidade:</strong> Seus feitiços frequentemente causam efeitos inesperados.</li>
+                        <li>⚠ <strong>Dupla Personalidade:</strong> O "Outro" sussurra em sua mente, tentando assumir o controle. (Olhos Negros, Sorriso Cruel)</li>
+                    </ul>
+                </div>
+            
+                <div class="card">
+                    <h2>Vantagens & Fraquezas</h2>
+                    <ul>
+                        <li>✅ <strong>Visão no Escuro:</strong> 36 metros.</li>
+                        <li>✅ <strong>Magia Drow:</strong> Sabe conjurar Globo de Escuridão (1 vez por descanso longo).</li>
+                        <li>✅ <strong>Resistência a Magia:</strong> Vantagem contra testes de resistência contra magias.</li>
+                        <li>✅ <strong>Linhagem Sombria:</strong> Feitiços de sombras são mais poderosos.</li>
+                        <li>⚠ <strong>O Outro:</strong> Em momentos de estresse, pode perder o controle e agir impulsivamente.</li>
+                        <li>⚠ <strong>Caçado:</strong> Alguns drow buscam sua morte!</li>
+                    </ul>
+                </div>
+            
+                <div class="card">
+                    <h2>Pontos de Vida & Sanidade</h2>
+                    <ul>
+                        <li>❤️ <strong>Pontos de Vida:</strong> 8 (+2 CON) = 10</li>
+                        <li>🧠 <strong>Sanidade:</strong> 8 (Sua mente está em conflito com O Outro)</li>
+                        <li>🏃 <strong>Deslocamento:</strong> 9m</li>
+                    </ul>
+                </div>
+            
+                <div class="card">
+                    <h2>Equipamento Inicial</h2>
+                    <ul>
+                        <li>📖 Livro do Velho Sombrio</li>
+                        <li>💎 Um colar prateado com uma joia desconhecida</li>
+                        <li>🗡️ Adaga de Dath</li>
+                    </ul>
+                </div>
+            
+                <div class="card">
+                    <h2>Truques (Cantrips)</h2>
+                    <div class="spell">
+                        <h4>🌀 Rajada Mística (Eldritch Blast)</h4>
+                        <p class="effect"><strong>Efeito:</strong> Dispara um feixe de energia contra um inimigo.</p>
+                        <p><strong>Alcance:</strong> 36m</p>
+                        <p><strong>Dano:</strong> 1d10 de dano de energia (Aumenta com o nível)</p>
+                        <p class="description"><strong>Descrição:</strong> É a magia mais icônica dos feiticeiros sombrios, criando um raio de pura energia arcana disparado da mão de Myzzdrin.</p>
+                    </div>
+                    <div class="spell">
+                        <h4>🖐️ Mão Espectral (Mage Hand)</h4>
+                        <p class="effect"><strong>Efeito:</strong> Cria uma mão flutuante invisível ou espectral que pode interagir com objetos.</p>
+                        <p><strong>Alcance:</strong> 9m</p>
+                        <p class="description"><strong>Descrição:</strong> A mão pode abrir portas destrancadas, pegar ou soltar objetos e até realizar pequenos truques.</p>
+                        <p class="creative-use"><strong>Uso Criativo:</strong> Útil para roubar itens sem ser notado, ativar armadilhas à distância ou enganar inimigos.</p>
+                    </div>
+                    <div class="spell">
+                        <h4>🎭 Ilusão Menor (Minor Illusion)</h4>
+                        <p class="effect"><strong>Efeito:</strong> Cria um som ou uma imagem ilusória dentro de 9m.</p>
+                        <p><strong>Duração:</strong> 1 minuto</p>
+                        <p class="description"><strong>Descrição:</strong> Pode ser usado para criar sons falsos (como uma voz, um grito ou passos) ou uma pequena imagem ilusória (como uma caixa, um crânio flutuante ou uma sombra misteriosa).</p>
+                        <p class="creative-use"><strong>Uso Criativo:</strong> Enganar guardas, distrair inimigos, esconder objetos importantes.</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <h2>Magias de 1º Círculo</h2>
+                    <div class="spell">
+                        <h4>💨 Passo Nebuloso (Misty Step)</h4>
+                        <p class="effect"><strong>Efeito:</strong> Teletransporte rápido de até 9m.</p>
+                        <p><strong>Ação:</strong> Bônus (pode ser usada no mesmo turno em que ataca ou se move)</p>
+                        <p class="description"><strong>Descrição:</strong> Envolto em névoa sombria, Myzzdrin desaparece e reaparece em outro ponto próximo.</p>
+                        <p class="creative-use"><strong>Uso Criativo:</strong> Fugir de um combate, atravessar grades ou buracos, alcançar locais altos.</p>
+                    </div>
+                    <div class="spell">
+                        <h4>🕷️ Raio das Trevas (Arms of Hadar)</h4>
+                        <p class="effect"><strong>Efeito:</strong> Criaturas ao redor fazem um teste de resistência. Se falharem, tomam dano e não podem usar reações.</p>
+                        <p><strong>Área:</strong> 3m ao redor de Myzzdrin.</p>
+                        <p><strong>Dano:</strong> 2d6 de dano necrótico.</p>
+                        <p class="description"><strong>Descrição:</strong> Tentáculos sombrios emergem do chão, agarrando e drenando a força dos inimigos.</p>
+                        <p class="creative-use"><strong>Uso Criativo:</strong> Escapar de cercos, impedir que inimigos reajam a ataques ou fugas.</p>
+                    </div>
+                    <div class="spell">
+                        <h4>🌀 Charme Perverso (Charm Person)</h4>
+                        <p class="effect"><strong>Efeito:</strong> Faz uma criatura pensar que Myzzdrin é um amigo.</p>
+                        <p><strong>Duração:</strong> 1 hora</p>
+                        <p><strong>Resistência:</strong> A criatura pode fazer um teste de Sabedoria para resistir.</p>
+                        <p class="description"><strong>Descrição:</strong> Pode ser usado para enganar inimigos, evitar brigas ou manipular alguém temporariamente.</p>
+                        <p class="creative-use"><strong>Uso Criativo:</strong> Fazer guardas deixarem ele passar, convencer alguém a dar informações ou escapar sem lutar.</p>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <h2>História</h2>
+                    <h1><strong>O Clã das Marcas de Guerra</strong></h1>
+                    <p style="text-align: center;">Após sua fuga de Zantraq, Myzzdrin vagou sem rumo até ser encontrado por um grupo de guerreiros brutais e temidos na superfície: o Clã das Marcas de Guerra. Esse clã não lutava por reinos ou bandeiras — eles viviam pelo combate, marcando cada vitória com tatuagens rituais que cobriam seus corpos.</p>
+                    <p style="text-align: center;">Dart Furioso, o líder do clã, viu algo especial em Myzzdrin. Ele não era um guerreiro comum, mas sua magia era devastadora, e seu espírito caótico combinava com a selvageria do clã. Em pouco tempo, Myzzdrin se tornou o braço direito de Dart, ajudando o grupo a derrubar exércitos, saquear fortalezas e enfrentar inimigos muito maiores.</p>
+                    <p style="text-align: center;">Cada batalha era um novo símbolo tatuado em sua pele, cobrindo seu peito e suas costas com histórias de glória e violência. Mas enquanto o clã via isso como um troféu, Myzzdrin sabia que suas tatuagens não eram apenas marcas de guerra… eram fragmentos de um destino sombrio que ele ainda não compreendia.</p>
+                </div>
+            
+                <div class="card">
+                    <h2>Frases Principais</h2>
+                    <ul>
+                        <li>"A luz vai te trair, Myzzdrin... confie apenas na escuridão."</li>
+                        <li>"Eles não são seus amigos... eles temem o que você pode se tornar."</li>
+                    </ul>
+                </div>
+            
+                <div class="card">
+                    <h2>Relacionamentos</h2>
+                    <p><strong>🔹 Têm medo dos drow:</strong></p>
+                    <ul>
+                        <li>Humanos e halflings – Histórias de ataques furtivos e escravidão.</li>
+                        <li>Elfos da superfície – Traição histórica dos drow.</li>
+                        <li>Anões – Conflitos subterrâneos e emboscadas constantes.</li>
+                    </ul>
+                    <br>
+                    <p><strong>🔹 Aceitam os drow (com ressalvas):</strong></p>
+                    <ul>
+                        <li>Duergar – Relações pragmáticas no Underdark.</li>
+                        <li>Outras criaturas do Underdark – Convivem por necessidade.</li>
+                        <li>Meio-drow e tieflings – Já sofrem preconceito e podem encontrar compreensão mútua.</li>
+                    </ul>
+                    <br>
+            
+                    <p><strong>🔹 Têm raiva dos drow:</strong></p>
+                    <ul>
+                        <li>Elfos nobres da superfície – Consideram os drow uma mancha na linhagem élfica.</li>
+                        <li>Svirfneblin (gnomos das profundezas) – Sofreram escravidão e ataques frequentes.</li>
+                        <li>Alguns anões – Rivalidade histórica e guerra por territórios subterrâneos.</li>
+                    </ul>
+                </div>
+            
+            </body>
+            </html>
